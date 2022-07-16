@@ -1,20 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap");
+
+:root {
+  --main-bg-background: #16191e;
+  --main-bg-primary: #d85a5a;
+  --main-text-primary: aliceblue;
+}
+
 * {
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /*----------------------------------------------BODY DEL INDEX---------------------------------------------*/
 .index__body {
-  display: flex;
-  min-height: 100vh;
-  margin: 0;
-  flex-direction: column;
-  background-color: #16191e;
-  list-style: none;
-  scroll-behavior: smooth;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  background-color: var(--main-bg-background);
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.index__header {
+  position: absolute;
+  grid-area: header;
+  background-color: var(--main-bg-background);
+  max-width: 100%;
+  width: 100vw;
+}
+
+.index__main {
+  grid-area: main;
+  background-repeat: no-repeat;
+}
+.index__footer {
+  grid-area: footer;
+  color: var(--main-bg-primary);
+  background-color: #d85a5a;
+  max-width: 100%;
+  width: 100vw;
 }
 
 /*--------------------------BODY DE LAS PAGINAS DE CONTACTO Y PREGUNTAS FRECUENTES-------------------------*/
@@ -71,33 +103,26 @@
 /*---------body contacto---------*/
 
 /*----------------------------------------------HEADER DEL INDEX------------------------------------------*/
-.index__header {
+.index__header ul {
   display: flex;
-  justify-content: flex-end;
-}
-.index__header__navbar {
-  display: none;
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  padding: 2.2rem;
-  padding-inline: 5.1rem;
-}
-.index__header__navbar ul {
-  display: inline-flex;
-}
-.index__header__navbar ul li {
-  padding-inline: 1rem;
-}
-.index__header__navbar ul li a {
-  font-family: "Roboto", sans-serif;
-  color: aliceblue;
-  font-weight: bold;
+  list-style: none;
+  max-width: 100%;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: space-around;
 }
 
+.index__header ul li {
+  padding: 1rem 0rem;
+}
+
+.index__header a {
+  color: white;
+  text-decoration: none;
+}
 /*-------------------------HEADER DE LAS PAGINAS DE CONTACTO Y PREGUNTAS FRECUENTES-------------------------*/
 .faq__abme__header nav {
-  display: none;
+  display: flex;
   align-items: center;
   margin: 1rem;
 }
@@ -147,91 +172,79 @@
 }
 
 /*----------------------------------------------MAIN DEL INDEX---------------------------------------------*/
-.index__main__section {
-  display: flex;
-  height: 100vh;
-  background-image: url(../resources/index/bg-mobile-v.2.png);
+.skills {
+  margin: 2rem 0rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+.index__main {
+  grid-area: main;
   background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  background-size: cover;
-}
-.index__main__section__empezar {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 2rem;
-  flex-direction: column;
-  align-items: center;
-}
-.index__main__titulo {
-  text-align: center;
-}
-.index__main__titulo h1 {
-  font-size: 100px;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  color: aliceblue;
-}
-.index__main__titulo h2 {
-  font-size: 36px;
-  font-family: "Roboto", sans-serif;
-  color: aliceblue;
-  text-transform: uppercase;
-  opacity: 0.6;
-}
-.index__main__boton {
-  padding: 1rem;
-}
-.index__main__boton a {
-  color: #d85a5a;
-}
-.index__main__boton a button {
-  padding: 1.2rem;
-  padding-inline: 4rem;
-  font-family: "Roboto", sans-serif;
-  background-color: #d85a5a;
-  color: aliceblue;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 8px;
-  letter-spacing: 1px;
-  border-color: #16191e;
-}
-.index__main__tarjetas {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.index__main__tarjetas article a img {
-  border-radius: 1rem;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
-.index__main__tarjetas article {
-  display: flex;
-  margin: 1rem;
-}
-.index__main__iframe {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 1rem;
-}
-.index__main__iframe__videos iframe {
-  display: none;
-  width: 1280px;
-  height: 720px;
-}
-.index__main__iframe__videos {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
 }
 
+.heading-1 {
+  font-size: 5rem;
+}
+.heading-2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.index__main .title {
+  background-image: url("/resources/index/bg-mobile-v.2.png");
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  color: var(--main-text-primary);
+  text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 4rem 0px;
+  background-repeat: no-repeat;
+}
+
+.index__main .button-primary {
+  background-color: var(--main-bg-primary);
+  border: none;
+  padding: 1rem 5rem;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--main-text-primary);
+  margin-top: 1rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.index__main .button-primary a {
+  color: var(--main-text-primary);
+  text-decoration: none;
+}
+
+.skillcard {
+  position: relative;
+}
+
+.skillcard .card-shadow-text {
+  position: absolute;
+  bottom: 4px;
+  padding: 1rem;
+  color: var(--main-text-primary);
+  border-radius: 1rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+}
+
+.skillcard img {
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.video {
+  display: none;
+}
 /*-----------------------------MAIN DE LAS PREGUNTAS FRECUENTES Y EL CONTACTO------------------------------*/
 /*---------main about me-----------*/
 .main__secundarias ul {
@@ -263,6 +276,37 @@
 .main__contacto {
 }
 /*---------------------------------------------FOOTER DEL INDEX--------------------------------------------*/
+.index__footer {
+  grid-area: footer;
+  color: var(--main-bg-primary);
+  background-color: #d85a5a;
+  max-width: 100%;
+  width: 100vw;
+}
+.index__footer ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 1rem;
+  list-style: none;
+  gap: 3rem;
+}
+.index__footer .social-icon img {
+  max-width: 10rem;
+  min-width: 8rem;
+}
+.index__footer .extralinks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.index__footer .extralinks a {
+  color: var(--main-text-primary);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem;
+}
+
 /*----------------------------FOOTER DE LAS PREGUNTAS FRECUENTES Y EL CONTACTO-----------------------------*/
 /*-------------------------------------FOOTER DEL RESTO DE LAS PAGINAS-------------------------------------*/
 
@@ -331,28 +375,52 @@
   esto va a pasar a partir de los 480 px
 }*/
 
-@media (min-width: 481px) {
-  /*----------------------main index-------------------------*/
-  .index__main__section {
-    background-image: url(../resources/index/bg-empezar.png);
-  }
-
-  .index__main__iframe__videos iframe {
-    display: flex;
-    width: 1280px;
-    height: 720px;
-  }
-
-  .index__main__section__empezar {
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    bottom: 0;
+@media (min-width: 700px) {
+  .index__main .title {
+    background-image: url("/resources/index/bg-empezar.png");
     flex-direction: row;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 5rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 6rem;
   }
+  .skills {
+    display: flex;
+    justify-content: space-around;
+  }
+  .video {
+    display: block;
+    width: 70%;
+  }
+  .index__header {
+    background-color: transparent;
+    padding: 1rem 3rem;
+    font-weight: 500;
+  }
+  .index__header ul {
+    justify-content: flex-end;
+  }
+  .index__footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .index__header ul li {
+    padding: 1rem;
+  }
+  .index__footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem;
+  }
+  .video-container {
+    display: flex;
+    justify-content: center;
+    height: 720px;
+    margin: 2rem 0rem;
+  }
+}
+@media (min-width: 480px) {
+  /*----------------------main index-------------------------*/
 
   .footer__all__legals ul,
   .footer__all__social ul {
@@ -379,10 +447,6 @@
     align-items: center;
     margin-inline: 7rem;
     max-width: 100%;
-  }
-
-  .index__header__navbar {
-    display: flex;
   }
 
   .faq__abme__header nav {
