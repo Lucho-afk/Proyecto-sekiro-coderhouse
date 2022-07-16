@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-sekiro-main",
+  "version": "1.0.0",
+  "description": "<h1> Proyecto-Sekiro </h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucho-afk/Proyecto-sekiro-coderhouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucho-afk/Proyecto-sekiro-coderhouse/issues"
+  },
+  "homepage": "https://github.com/Lucho-afk/Proyecto-sekiro-coderhouse#readme",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19",
+    "nodenpm": "^0.1.6"
+  }
+}
