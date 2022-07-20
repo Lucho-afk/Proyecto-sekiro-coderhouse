@@ -453,38 +453,3 @@
     display: flex;
   }
 }
-
-.legals__jefes li a {
-  text-decoration: none;
-}
-
-.social__jefes {
-  display: flex;
-  justify-content: space-around;
-}
-
-.jefes__first {
-}
-
-.txt_vod_jefes {
-  display: flex;
-  margin-inline: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.txt_vod_jefes article {
-}
-.txt_vod_jefes article p {
-  color: var(--main-text-primary);
-}
-.txt_vod_jefes article iframe {
-  display: none;
-}
-
-@media (min-width: 700px) {
-  .txt_vod_jefes article iframe {
-    display: flex;
-    min-width: 50%;
-  }
-}
