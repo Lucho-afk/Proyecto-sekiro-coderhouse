@@ -31,6 +31,8 @@
   position: absolute;
   grid-area: header;
   background-color: var(--main-bg-background);
+  max-width: 100%;
+  width: 100vw;
 }
 
 .index__main {
@@ -42,7 +44,6 @@
   color: var(--main-bg-primary);
   background-color: #d85a5a;
   max-width: 100%;
-  width: 100vw;
 }
 
 /*--------------------------BODY DE LAS PAGINAS DE CONTACTO Y PREGUNTAS FRECUENTES-------------------------*/
@@ -189,6 +190,7 @@
 
 .index__main .title {
   background-image: url("../resources/index/bg-mobile-v.2.png");
+  background-size: 100% 100%;
   display: flex;
   color: var(--main-text-primary);
   text-align: center;
@@ -274,6 +276,7 @@
   grid-area: footer;
   color: var(--main-bg-primary);
   background-color: #d85a5a;
+  padding: 2rem;
 }
 .index__footer ul {
   display: grid;
@@ -282,6 +285,7 @@
   margin: 1rem;
   list-style: none;
   gap: 3rem;
+  justify-items: center;
 }
 .index__footer .social-icon img {
   max-width: 10rem;
@@ -455,9 +459,6 @@
   justify-content: space-around;
 }
 
-.jefes__first {
-}
-
 .txt_vod_jefes {
   display: flex;
   margin-inline: 2rem;
@@ -465,8 +466,6 @@
   justify-content: space-around;
 }
 
-.txt_vod_jefes article {
-}
 .txt_vod_jefes article p {
   color: var(--main-text-primary);
 }
@@ -479,4 +478,136 @@
     display: flex;
     min-width: 50%;
   }
+
+  .social__jefes {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.main__content {
+  background-image: url(../resources/jefes/background-mobile.jpg);
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+#card {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: #16191e;
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: 12px;
+  box-shadow: 10px -2px 63px -13px rgba(0, 0, 0, 0.67);
+  margin-bottom: 1.5rem;
+}
+
+#card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#badge {
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: 0.375rem;
+  display: inline-block;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius);
+  background-color: #d85a5a;
+  padding-inline: 1.5rem;
+}
+
+.card__content__tittle {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: grey;
+  font-weight: bold;
+}
+
+.main__container__firstview {
+  background-image: url(../resources/jefes/background-mobile.jpg);
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+#card-body {
+  --bs-card-spacer-y: 0rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 1px;
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(112, 87, 87, 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: rgba(141, 135, 135, 0.253);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  opacity: 25px;
+}
+
+.indice__tittle {
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+.main__container__firstview__herramientas__shinobi {
+  background-image: url(../resources/herramientas/bg-mobil.jpg);
+  background-size: 100% 100%;
+  min-height: 100vh;
 }
