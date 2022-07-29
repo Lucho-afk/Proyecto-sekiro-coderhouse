@@ -15,75 +15,141 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
     <title>Contacto</title>
   </head>
-  <body class="all__body">
-    <header class="all__header">
-      <nav>
-        <ul class="animate__animated animate__fadeInDown">
-          <li><a href="../index.html">Home</a></li>
-          <li>
-            <a href="jefes.html">Jefes</a>
-          </li>
-          <li><a href="habilidades.html">Habilidades</a></li>
-          <li>
-            <a href="herramientas-shinobi.html">Herramientas Shinobi</a>
-          </li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+  <body class="">
+    <header>
+      <nav class="navbar navbar-expand-lg" style="background-color: #d85a5a">
+        <div class="container-fluid d-flex justify-content-end">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav align-content-sm-end">
+              <a class="nav-link" href="../index.html" style="color: aliceblue"
+                >Home</a
+              >
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./jefes.html"
+                style="color: aliceblue"
+                >Jefes</a
+              >
+              <a
+                class="nav-link"
+                href="./habilidades.html"
+                style="color: aliceblue"
+                >Habilidades</a
+              >
+              <a
+                class="nav-link"
+                href="./herramientas-shinobi.html"
+                style="color: aliceblue"
+                >Herramientas</a
+              >
+              <a
+                class="nav-link"
+                href="./contacto.html"
+                style="color: aliceblue"
+                >Contacto</a
+              >
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
-    <main class="all_main" id="main__contacto">
-      <div class="main__contacto">
-        <section>
-          <label for="nombre">Nombre:</label>
-          <input
-            type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="ingresa tu nombre"
-            required
-          />
-
-          <label for="apellido">Apellido:</label>
-          <input
-            type="text"
-            name="apellido"
-            id="apellido"
-            placeholder="ingresa tu apellido"
-          />
-
-          <label for="correo">Email:</label>
-          <input
-            type="email"
-            name="correo"
-            id="correo"
-            placeholder="ingresa tu email"
-            required
-          />
-
-          <label for="opcion">Es su primer juego de FronSoftware</label>
-
-          <input type="radio" name="opcion" />Si
-          <input type="radio" name="opcion" />No <br /><br />
-          <label for="comentario">Escriba el motivo del contacto:</label>
-
-          <textarea
-            name="comentario"
-            id="comentario"
-            cols="60"
-            rows="10"
-            minlength="20"
-            required
-          ></textarea>
-          <input type="submit" />
-        </section>
+    <main class="main__contacto">
+      <div class="container" style="padding-top: 1rem" id="form__mobile">
+        <div class="card text-center" id="form__contacto">
+          <div class="card-header" style="font-weight: bold">CONTACTO</div>
+          <div class="card-body" id="form__body">
+            <div class="form__elements">
+              <label for="" class="">Nombre</label>
+              <input type="text" class="form__label" />
+            </div>
+            <div class="form__elements">
+              <label for="">Apellido</label>
+              <input type="text" class="form__label" />
+            </div>
+            <div class="form__elements">
+              <label for="">Email</label>
+              <input type="email" class="form__label" />
+            </div>
+            <input
+              type="submit"
+              class="btn btn-danger"
+              value="Enviar"
+              style="
+                background-color: #d85a5a;
+                border-color: #d85a5a;
+                font-weight: bold;
+              "
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container" id="form__desktop">
+        <div class="card mb-0" id="form_desktop_container">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="../resources/Contacto/lady-emma.jpg"
+                class="img-fluid rounded-start"
+                alt="lady emma"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body" id="card__form__desktop">
+                <h5 class="card-title" style="font-weight: bold">Contacto</h5>
+                <div class="form__elements">
+                  <label for="" class="">Nombre</label>
+                  <input type="text" class="form__label" />
+                </div>
+                <div class="form__elements">
+                  <label for="">Apellido</label>
+                  <input type="text" class="form__label" />
+                </div>
+                <div class="form__elements">
+                  <label for="">Email</label>
+                  <input type="email" class="form__label" />
+                </div>
+                <div style="text-align: right">
+                  <input
+                    type="submit"
+                    class="btn btn-danger"
+                    value="Enviar"
+                    style="
+                      background-color: #d85a5a;
+                      border-color: #d85a5a;
+                      font-weight: bold;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer">
       <div class="footer__all">
         <div class="footer__all__social">
-          <ul>
+          <ul style="padding: 0">
             <li>
               <a href="https://www.facebook.com/"
                 ><img
@@ -123,12 +189,19 @@
           </ul>
         </div>
         <div class="footer__all__legals">
-          <ul>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="about-me.html">ABOUT ME</a></li>
+          <ul style="padding: 0">
+            <li><a href="faq.html" style="text-decoration: none">FAQ</a></li>
+            <li>
+              <a href="about-me.html" style="text-decoration: none">ABOUT ME</a>
+            </li>
           </ul>
         </div>
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

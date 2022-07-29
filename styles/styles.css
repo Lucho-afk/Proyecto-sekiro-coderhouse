@@ -276,7 +276,6 @@
   grid-area: footer;
   color: var(--main-bg-primary);
   background-color: #d85a5a;
-  padding: 2rem;
 }
 .index__footer ul {
   display: grid;
@@ -488,7 +487,7 @@
 .main__content {
   background-image: url(../resources/jefes/background-mobile.jpg);
   background-size: 100% 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 3rem);
 }
 
 #card {
@@ -562,7 +561,7 @@
 .main__container__firstview {
   background-image: url(../resources/jefes/background-mobile.jpg);
   background-size: 100% 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 3rem);
 }
 
 #card-body {
@@ -609,5 +608,74 @@
 .main__container__firstview__herramientas__shinobi {
   background-image: url(../resources/herramientas/bg-mobil.jpg);
   background-size: 100% 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 3rem);
+}
+
+/*------form-----*/
+.main__contacto {
+  background-image: url(../resources/Contacto/lady-emma.jpg);
+  background-size: 100% 100%;
+  min-height: calc(100vh - 3rem);
+}
+
+#form__contacto {
+  --bs-card-bg: #ffffff7d;
+}
+
+#form__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.form__label {
+  border-style: none;
+  background-color: transparent;
+  border: 0px;
+  outline: none;
+  cursor: default;
+  border-bottom: solid 1px var(--main-bg-background);
+}
+
+#form__contacto {
+  background-size: 100% 100%;
+  min-height: calc(100vh - 5rem);
+}
+
+.form__elements {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#form__desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main__contacto {
+    background-image: url(../resources/Contacto/habitacion-ishin.jpg);
+    background-size: 100% 100%;
+    min-height: calc(100vh - 3rem);
+  }
+
+  #form__mobile {
+    display: none;
+  }
+
+  #form__desktop {
+    display: flex;
+    padding-top: 6rem;
+  }
+
+  #form_desktop_container {
+    --bs-card-bg: #ffffff7d;
+  }
+
+  #card__form__desktop {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
