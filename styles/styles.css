@@ -225,7 +225,7 @@
 
 .skillcard .card-shadow-text {
   position: absolute;
-  bottom: 4px;
+  bottom: 0px;
   padding: 1rem;
   color: var(--main-text-primary);
   border-radius: 1rem;
