@@ -1,0 +1,6 @@
+@mixin letra($color, $weight, $size) {
+  color: $color;
+  font-family: "Roboto", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}

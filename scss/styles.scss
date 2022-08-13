@@ -1,56 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap");
-
+@import "./misc/variables";
+@import "./misc/normalize";
+@import "./partials/footer";
 :root {
   --main-bg-background: #16191e;
   --main-bg-primary: #d85a5a;
   --main-text-primary: aliceblue;
 }
 
-* {
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
-}
-
 /*----------------------------------------------BODY DEL INDEX---------------------------------------------*/
-.index__body {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  background-color: var(--main-bg-background);
-  width: 100vw;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.index__header {
-  position: absolute;
-  grid-area: header;
-  background-color: var(--main-bg-background);
-  max-width: 100%;
-  width: 100vw;
-}
-
-.index__main {
-  grid-area: main;
-  background-repeat: no-repeat;
-}
-.index__footer {
-  grid-area: footer;
-  color: var(--main-bg-primary);
-  background-color: #d85a5a;
-  max-width: 100%;
-  width: 100vw;
-}
+@import "./views/index";
 
 /*--------------------------BODY DE LAS PAGINAS DE CONTACTO Y PREGUNTAS FRECUENTES-------------------------*/
-
 .faq__abme {
   background-color: #16191e;
   display: grid;
@@ -74,32 +35,6 @@
 }
 
 /*--------------------------------------BODY DEL RESTO DE LAS PAGINAS--------------------------------------*/
-
-.all__body {
-  display: grid;
-  background-color: #16191e;
-  min-height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 1.8fr 0.2fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "header header header"
-    "main main main"
-    "footer footer footer";
-}
-
-.all_main {
-  grid-area: main;
-}
-
-.all_header {
-  grid-area: header;
-}
-
-.footer {
-  grid-area: footer;
-}
 /*---------body contacto---------*/
 
 /*----------------------------------------------HEADER DEL INDEX------------------------------------------*/
@@ -108,7 +43,7 @@
   list-style: none;
   max-width: 100%;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
   justify-content: space-around;
 }
 
@@ -152,100 +87,8 @@
 }
 
 /*--------------------------------------HEADER DEL RESTO DE LAS PAGINAS--------------------------------------*/
-.all__header {
-  display: flex;
-  justify-content: flex-end;
-  background-color: #d85a5a;
-  padding: 1rem;
-  width: 100vw;
-}
-.all__header ul {
-  display: flex;
-}
-.all__header ul li {
-  display: flex;
-  padding-inline: 1rem;
-}
-.all__header ul li a {
-  font-family: "Roboto", sans-serif;
-  color: aliceblue;
-}
-
-/*----------------------------------------------MAIN DEL INDEX---------------------------------------------*/
-.skills {
-  margin: 2rem 0rem;
-  display: grid;
-  gap: 1rem;
-  justify-items: center;
-}
-.index__main {
-  grid-area: main;
-  background-repeat: no-repeat;
-}
-
-.heading-1 {
-  font-size: 5rem;
-}
-.heading-2 {
-  font-size: 1.8rem;
-  font-weight: 300;
-}
-
-.index__main .title {
-  background-image: url("/resources/index/bg-mobile-v.2.png");
-  display: flex;
-  width: 100vw;
-  max-width: 100%;
-  color: var(--main-text-primary);
-  text-align: center;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  padding: 4rem 0px;
-  background-repeat: no-repeat;
-}
-
-.index__main .button-primary {
-  background-color: var(--main-bg-primary);
-  border: none;
-  padding: 1rem 5rem;
-  border-radius: 7px;
-  font-weight: bold;
-  font-size: 1rem;
-  color: var(--main-text-primary);
-  margin-top: 1rem;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-.index__main .button-primary a {
-  color: var(--main-text-primary);
-  text-decoration: none;
-}
-
-.skillcard {
-  position: relative;
-}
-
-.skillcard .card-shadow-text {
-  position: absolute;
-  bottom: 4px;
-  padding: 1rem;
-  color: var(--main-text-primary);
-  border-radius: 1rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-  width: 100%;
-}
-
-.skillcard img {
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.video {
-  display: none;
-}
-/*-----------------------------MAIN DE LAS PREGUNTAS FRECUENTES Y EL CONTACTO------------------------------*/
+/*----------------------------------------------MAIN DEL INDEX-----------------------------------------------*/
+/*-----------------------------MAIN DE LAS PREGUNTAS FRECUENTES Y EL CONTACTO--------------------------------*/
 /*---------main about me-----------*/
 .main__secundarias ul {
   display: flex;
@@ -272,102 +115,10 @@
 }
 
 /*--------------------------------------MAIN DEL RESTO DE LAS PAGINAS--------------------------------------*/
-/*---------main contacto-----------*/
 /*---------------------------------------------FOOTER DEL INDEX--------------------------------------------*/
-.index__footer {
-  grid-area: footer;
-  color: var(--main-bg-primary);
-  background-color: #d85a5a;
-  max-width: 100%;
-  width: 100vw;
-}
-.index__footer ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  margin: 1rem;
-  list-style: none;
-  gap: 3rem;
-}
-.index__footer .social-icon img {
-  max-width: 10rem;
-  min-width: 8rem;
-}
-.index__footer .extralinks {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.index__footer .extralinks a {
-  color: var(--main-text-primary);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 1rem;
-}
-
 /*----------------------------FOOTER DE LAS PREGUNTAS FRECUENTES Y EL CONTACTO-----------------------------*/
 /*-------------------------------------FOOTER DEL RESTO DE LAS PAGINAS-------------------------------------*/
 
-.footer {
-  display: flex;
-  background-color: #d85a5a;
-  align-self: flex-end;
-}
-.footer__all {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  flex-direction: column;
-  margin: 3rem 0rem;
-}
-
-.footer__all__social {
-  display: flex;
-  justify-content: center;
-}
-
-.footer__all__legal {
-  display: flex;
-  justify-content: center;
-}
-
-.footer__all__legal ul {
-  display: flex;
-  justify-content: center;
-}
-
-.footer__all__social ul {
-  display: grid;
-  grid-template-areas:
-    "facebook twitter"
-    "instragram youtube";
-  gap: 3.5rem;
-}
-.facebook {
-  grid-area: "facebook";
-}
-.twitter {
-  grid-area: "twitter";
-}
-.instagram {
-  grid-area: "instagram";
-}
-.youtube {
-  grid-area: "youtube";
-}
-
-.footer__all__legals ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-}
-.footer__all__legals ul li a {
-  color: aliceblue;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
 /*-if not in (pantalla <481 px){
   aplicame todos estos estilos
   esto va a pasar a partir de los 480 px
@@ -375,7 +126,7 @@
 
 @media (min-width: 700px) {
   .index__main .title {
-    background-image: url("/resources/index/bg-empezar.png");
+    background-image: url("../resources/index/bg-empezar.png");
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -449,5 +200,236 @@
 
   .faq__abme__header nav {
     display: flex;
+  }
+}
+
+.legals__jefes li a {
+  text-decoration: none;
+}
+
+.social__jefes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.txt_vod_jefes {
+  display: flex;
+  margin-inline: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.txt_vod_jefes article p {
+  color: var(--main-text-primary);
+}
+.txt_vod_jefes article iframe {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .txt_vod_jefes article iframe {
+    display: flex;
+    min-width: 50%;
+  }
+
+  .social__jefes {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.main__content {
+  background-image: url(../resources/jefes/background-mobile.jpg);
+  background-size: 100% 100%;
+  min-height: calc(100vh - 3rem);
+}
+
+#card {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: #16191e;
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: 12px;
+  box-shadow: 10px -2px 63px -13px rgba(0, 0, 0, 0.67);
+  margin-bottom: 1.5rem;
+}
+
+#card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#badge {
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: 0.375rem;
+  display: inline-block;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius);
+  background-color: #d85a5a;
+  padding-inline: 1.5rem;
+}
+
+.card__content__tittle {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: grey;
+  font-weight: bold;
+}
+
+.main__container__firstview {
+  background-image: url(../resources/jefes/background-mobile.jpg);
+  background-size: 100% 100%;
+  min-height: calc(100vh - 3rem);
+}
+
+#card-body {
+  --bs-card-spacer-y: 0rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 1px;
+  --bs-card-border-radius: 0.375rem;
+  --bs-card-box-shadow: ;
+  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: rgba(112, 87, 87, 0.03);
+  --bs-card-cap-color: ;
+  --bs-card-height: ;
+  --bs-card-color: ;
+  --bs-card-bg: rgba(141, 135, 135, 0.253);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  opacity: 25px;
+}
+
+.indice__tittle {
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+.main__container__firstview__herramientas__shinobi {
+  background-image: url(../resources/herramientas/bg-mobil.jpg);
+  background-size: 100% 100%;
+  min-height: calc(100vh - 3rem);
+}
+
+/*------form-----*/
+.main__contacto {
+  background-image: url(../resources/Contacto/lady-emma.jpg);
+  background-size: 100% 100%;
+  min-height: calc(100vh - 3rem);
+}
+
+#form__contacto {
+  --bs-card-bg: #ffffff7d;
+}
+
+#form__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.form__label {
+  border-style: none;
+  background-color: transparent;
+  border: 0px;
+  outline: none;
+  cursor: default;
+  border-bottom: solid 1px var(--main-bg-background);
+}
+
+#form__contacto {
+  background-size: 100% 100%;
+  min-height: calc(100vh - 5rem);
+}
+
+.form__elements {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#form__desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main__contacto {
+    background-image: url(../resources/Contacto/habitacion-ishin.jpg);
+    background-size: 100% 100%;
+    min-height: calc(100vh - 3rem);
+  }
+
+  #form__mobile {
+    display: none;
+  }
+
+  #form__desktop {
+    display: flex;
+    padding-top: 6rem;
+  }
+
+  #form_desktop_container {
+    --bs-card-bg: #ffffff7d;
+  }
+
+  #card__form__desktop {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

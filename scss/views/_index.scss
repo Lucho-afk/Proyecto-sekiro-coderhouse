@@ -1,0 +1,98 @@
+@import "./misc/variables";
+
+.index__body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  background-color: $background-primario;
+  overflow-x: hidden;
+}
+.index__header {
+  position: absolute;
+  grid-area: header;
+  background-color: $background-primario;
+  max-width: 100%;
+  width: 100vw;
+}
+
+/*----------------------------------*/
+.skills {
+  margin: 2rem 0rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+.index__main {
+  grid-area: main;
+  background-repeat: no-repeat;
+}
+
+.heading-1 {
+  font-size: 5rem;
+}
+.heading-2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.index__main .title {
+  background-image: url("../resources/index/bg-mobile-v.2.png");
+  background-size: 100% 100%;
+  display: flex;
+  color: $color-texto;
+  text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 4rem 0px;
+  background-repeat: no-repeat;
+}
+
+.index__main .button-primary {
+  background-color: $background-secundario;
+  border: none;
+  padding: 1rem 5rem;
+  @include letra($color-texto, bold, 1rem);
+  border-radius: 7px;
+  margin-top: 1rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.index__main .button-primary a {
+  color: $color-texto;
+  text-decoration: none;
+}
+
+.skillcard {
+  position: relative;
+}
+
+.skillcard .card-shadow-text {
+  position: absolute;
+  bottom: 0px;
+  padding: 1rem;
+  color: $color-texto;
+  border-radius: 1rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+}
+
+.skillcard img {
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.video {
+  display: none;
+}
+/*----------------------------------*/
+.footer {
+  grid-area: footer;
+  color: var(--main-bg-primary);
+  background-color: $background-secundario;
+  max-width: 100%;
+}
+/*---------------------------------*/
